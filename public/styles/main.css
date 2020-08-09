@@ -1,0 +1,38 @@
+
+:root { /* Aqui a gente fez uma variavel(var) de cor global, que eu posso usar nome dela para referencia-la*/
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+* { /* Aqui a gente tem outro tipo de seletor que referencia todos os outros como se fose um atalho para todos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Aqui eu do a preferencia da caixa*/
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
+/* BOX MODEL 
+Modelo de caixa
+toda caixa tem:
+largura, altura, espaçamento, preenchimentos, 
+bordas, cor, fundo, maneira que é vista pelo html(display),
+posicionamento, alinhamentos
+*/
+

@@ -1,0 +1,160 @@
+div#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    /* Alinhamento da caxa (pleo lado de fora da caixa)*/
+    margin: 0 auto;
+}
+
+div#page-create-point header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+div#page-create-point header a span {
+    background-image: url(../extras-aula-1/icones/arrow-left.svg);
+    margin-right: 16px;
+    display: flex;
+    width: 20px;
+    height: 24px;
+}
+
+div#page-create-point form {
+    background-color: white;
+    margin: 80px auto;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 730px; /*Maximo que a caixa pode chebar*/
+ 
+}
+
+div#page-create-point form h1 {
+    font-size: 36px;
+}
+
+div#page-create-point form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+
+div#page-create-point form legend {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div#page-create-point form legend h2 {
+    font-size: 24px;
+}
+
+form legend span {
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input, form select {
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none; /*OU eja quando eu selecionar a caxinha de preceenchimento nao vai aparecer a bordar*/
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field {
+    margin-left: 24px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: background-color 400ms;
+}
+
+form button:hover {
+    background-color: #2fb86e;
+}
+
+/*Organizando os itens*/
+
+.itens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Aqui eu vou dizer quantas colunas vai ter, ja esse 1fr ele vai fazer os calculos de quanto prrecisa pra cada coluna */
+    gap: 16px; /* Aqui ele vai fazer a separação das colunas*/
+}
+
+.itens-grid li {
+    background-color: #f5f5f5;
+    list-style: none;
+
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+
+    height: 180px;
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    cursor: pointer; /* Ele vai trocar a setia do mouse pelo dedinho quando passar o mouues em cima do objeto*/
+}
+
+.itens-grid li span {
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+
+.itens-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.itens-grid li img, .itens-grid li span {
+    pointer-events: none;
+}
